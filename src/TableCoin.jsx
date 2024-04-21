@@ -34,23 +34,24 @@ const TableCoin = ({coins , isloading }) => {
     <tbody>
         {
        isloading ? 
+       <div>
         <InfinitySpin
     visible={true}
     width="200"
     color="#4fa94d"
     ariaLabel="infinity-spin-loading"
     
-    />
+    /></div>
     : 
     coins.map((item) => 
         <tr key={item.id}>
-            <th className='border-b border-e border-black p-5'  onClick={()=>{setId(item.id) , setFinish(true)}} style={{display : "flex" , flexDirection : "column"}}>
+            <th className='flex flex-col justify-center items-center border-b border-e border-black p-5'  onClick={()=>{setId(item.id) , setFinish(true)}} style={{display : "flex" , flexDirection : "column"}}>
                 <img  src={item.image} style={{width :"50px"}} />
                 <span>{item.symbol}</span>
             </th>
             <th className='border-b border-e border-black'>{item.name}</th>
             <th className='border-b border-e border-black'>{item.current_price}$</th>
-            <th className='border-b border-e border-black' onClick={()=>console.log(coins)}>{item.price_change_24h}</th>
+            <th className='border-b border-e border-black'>{item.price_change_24h}</th>
             <th className='border-b border-e border-black'>{item.price_change_percentage_24h}</th>
         </tr>)
             

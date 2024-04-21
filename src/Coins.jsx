@@ -26,14 +26,14 @@ useEffect(()=>{
 },[coins , page])
 
   return (
-    <div className='flex flex-col items-center text-center mb-[200pt]'>
-    <SearchCoin coins={coins}/>
+    <div className='flex flex-col items-center text-center mb-[200pt] '>
+    <SearchCoin/>
     <br />
     <br />
-        <table className='border border-black'>
+        <table className='border border-black w-3/5 bg-slate-100 items-center'>
             <thead className='border-b border-black'>
                 <tr>
-                    <th className='border-e border-black '>coin</th>
+                    <th className='border-e border-black'>coin</th>
                     <th className='border-e border-black px-10'>name</th>
                     <th className='border-e border-black px-10'>price</th>
                     <th className='border-e border-black px-10'>24h</th>
