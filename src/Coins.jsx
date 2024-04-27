@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import TableCoin from './TableCoin';
 import SearchCoin from './SearchCoin';
 import Chart from './Chart';
+import ReactPaginate from 'react-paginate'
 
 
 
@@ -43,11 +44,14 @@ useEffect(()=>{
             <TableCoin coins={coins} isloading={loading}/>
             
         </table>
-        <div className='flex flex-row space-x-4 mt-10'>
-    <button className=' bg-slate-200 w-10 rounded-md' onClick={e =>{console.log(page), setPage(e.target.value)}} value={1}>1</button>
-    <button className=' bg-slate-200 w-10 rounded-md' onClick={e =>{setPage(e.target.value)}} value={2}>2</button>
-    <button className=' bg-slate-200 w-10 rounded-md' onClick={e =>{setPage(e.target.value)}} value={3}>3</button>
-    <button className=' bg-slate-200 w-10 rounded-md' onClick={e =>{setPage(e.target.value)}} value={4}>4</button>
+        <div className='flex flex-col w-3/5 mt-10'>
+            <div className='mb-5 space-x-3'>
+            <button className='bg-slate-200 w-10 h-10 rounded-lg' onClick={()=>setPage(1)}>1</button>
+            <button className='bg-slate-200 w-10 h-10 rounded-lg' onClick={()=>setPage(1)}>2</button>
+            <button className='bg-slate-200 w-10 h-10 rounded-lg' onClick={()=>setPage(1)}>3</button>
+            </div>
+    <input className='rounded-lg active:border-2 border-black w-full' type='number' placeholder='enter number to give you new coins ' onChange={(e)=>setPage(e.target.value)}/>
+  
     </div>
     </div>
   )
