@@ -1,7 +1,3 @@
-Certainly! Below is a template for a README file for a cryptocurrency-related project that utilizes an API, built with React and Vite. This template includes sections commonly found in READMEs, such as a project overview, setup instructions, usage details, and contact information.
-
----
-
 # Cryptocurrency Dashboard Project
 
 ## Overview
@@ -38,7 +34,7 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/cryptocurrency-dashboard.git
+   git clone https://github.com/mohammadaminmsv/coin-project.git
    cd cryptocurrency-dashboard
    ```
 
@@ -66,9 +62,4 @@ Once the application is running, navigate to `http://localhost:5173/` to view th
 
 Contributions to this project are welcome. Please fork the repository and submit a pull request with your changes or improvements.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
-
-## Contact
 
